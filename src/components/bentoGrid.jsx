@@ -62,7 +62,7 @@ export default function BentoGrid({darkMode}) {
               </div>
                   <img
                     alt=""
-                    src="/src/assets/coding-pov.png"
+                    src="/assets/coding-pov.png"
                     className="w-full h-auto object-cover max-h-20 sm:max-h-60 lg:max-h-50 left-20"
                   />
             </div>

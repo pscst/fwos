@@ -15,18 +15,22 @@ export function Frameworks() {
         "framer",
         "figma"
     ];
+    const logos = import.meta.glob('../assets/logos/*.svg', { eager: true });
+
+const logo = logos[`../assets/logos/${skill}.svg`];
+
   return (
     <div className="relative flex h-[20rem] w-full flex-col 
     items-center justify-center scale-[1]">
       <OrbitingCircles iconSize={40}>
         {skills.map((skill, index) =>(
-        <Icon key={index} src={`src/assets/logos/${skill}.svg`}/>
+        <Icon key={index} src={logo.default}/>
         
         ))}
       </OrbitingCircles>
       <OrbitingCircles iconSize={30} radius={100} reverse speed={0.5}>
       {skills.reverse().map((skill, index) =>(
-        <Icon key={index} src={`src/assets/logos/${skill}.svg`}/>
+        <Icon key={index} src={logo.default}/>
         
         ))}
       </OrbitingCircles>

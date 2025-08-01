@@ -4,26 +4,25 @@ import { Marquee } from "./mariquee";
 
 const reviews = [
   {
-    img: "./src/assets/illustrations/art-1.jpg",
+    img: "/assets/illustrations/art-1.jpg",
   },
   {
-
-    img: "./src/assets/illustrations/art-2.jpg",
+    img: "/assets/illustrations/art-2.jpg",
   },
   {
-    img: "./src/assets/illustrations/art-3.jpg",
+    img: "/assets/illustrations/art-3.jpg",
   },
   {
-    img: "./src/assets/illustrations/art-4.jpg",
+    img: "/assets/illustrations/art-4.jpg",
   },
   {
-    img: "./src/assets/illustrations/art-5.jpg",
+    img: "/assets/illustrations/art-5.jpg",
   },
   {
-    img: "./src/assets/illustrations/art-6.jpg",
+    img: "/assets/illustrations/art-6.jpg",
   },
-
 ];
+
 
 const firstRow = [...reviews];
 const secondRow = [reviews[1], reviews[3], reviews[0], reviews[5], reviews[2], reviews[4]]; 
