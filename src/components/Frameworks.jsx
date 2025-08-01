@@ -24,7 +24,7 @@ const logo = logos[`../assets/logos/${skill}.svg`];
     items-center justify-center scale-[1]">
       <OrbitingCircles iconSize={40}>
         {skills.map((skill, index) =>(
-        <Icon key={index} src={logo.default/>
+        <Icon key={index} src={logo.default}/>
         
         ))}
       </OrbitingCircles>
