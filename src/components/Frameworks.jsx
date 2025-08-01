@@ -20,13 +20,13 @@ export function Frameworks() {
     items-center justify-center scale-[1]">
       <OrbitingCircles iconSize={40}>
         {skills.map((skill, index) =>(
-        <Icon key={index} src={`src/assets/logos/${skill}.svg`}/>
+        <Icon key={index} src={`/src/assets/logos/${skill}.svg`}/>
         
         ))}
       </OrbitingCircles>
       <OrbitingCircles iconSize={30} radius={100} reverse speed={0.5}>
       {skills.reverse().map((skill, index) =>(
-        <Icon key={index} src={`src/assets/logos/${skill}.svg`}/>
+        <Icon key={index} src={`/src/assets/logos/${skill}.svg`}/>
         
         ))}
       </OrbitingCircles>
