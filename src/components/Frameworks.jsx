@@ -15,13 +15,13 @@ export function Frameworks() {
         "framer",
         "figma"
     ];
-<<<<<<< HEAD
-    const logos = import.meta.glob('../assets/logos/*.svg', { eager: true });
-=======
-const logos = import.meta.glob('../assets/logos/*.svg', { eager: true });
->>>>>>> b18e8186100c2b0a731d489edd94b913a2a49d31
 
-const logo = logos[`../assets/logos/${skill}.svg`];
+      const logos = import.meta.glob('../assets/logos/*.svg', { eager: true });
+
+
+
+
+      const logo = logos[`../assets/logos/${skill}.svg`];
 
   return (
     <div className="relative flex h-[20rem] w-full flex-col 
