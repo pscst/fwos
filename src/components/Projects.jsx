@@ -35,7 +35,8 @@ const Projects = ({ darkMode }) => {
       githubUrl: 'https://github.com/pscst',
       liveUrl: '#',
       category: 'Web-Application',
-      year: 2024
+      year: 2024,
+      videoId: "1bq6vuQ1x7SgyQnG3s_VY5nQXtJ7RkiQl"
     },
     {
       id: 3,
@@ -47,7 +48,8 @@ const Projects = ({ darkMode }) => {
       githubUrl: 'https://github.com/pscst',
       liveUrl: '#',
       category: 'Web-Application',
-      year: 2024
+      year: 2024,
+      videoId: "1jpYD_xdFHcHApev6D6tO0B9_t0bcBI-l"
     },
     {
       id: 4,
@@ -286,7 +288,22 @@ const Projects = ({ darkMode }) => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setSelectedProject(null)}>
               <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.8, opacity: 0 }} onClick={(e) => e.stopPropagation()} className={`max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-2xl ${darkMode ? 'bg-gray-900 border border-cyan-500/20' : 'bg-white'}`}>
                 <div className="relative">
-                  <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover object-top" />
+                {selectedProject.videoId ? (
+                  <iframe
+                    src={`https://drive.google.com/file/d/${selectedProject.videoId}/preview`}
+                    allow="autoplay"
+                    className="w-full h-64 rounded-t-2xl"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-64 object-cover object-top rounded-t-2xl"
+                  />
+                )}
+
                   <button onClick={() => setSelectedProject(null)} className={`absolute top-4 right-4 p-2 rounded-full cursor-pointer ${darkMode ? 'bg-gray-800/80 text-white' : 'bg-white/80 text-gray-800'}`}><FiX size={20} /></button>
                 </div>
 

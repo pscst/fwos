@@ -211,7 +211,7 @@ const Hero = ({ darkMode, toggleTheme }) => {
               darkMode ? 'text-gray-300' : 'text-gray-950'
             }`}
           >
-            Turning Ideas Into Code | Exploring Tomorrow's Tech Today
+             From curiosity to capability.
           </motion.p>
 
           <motion.div
