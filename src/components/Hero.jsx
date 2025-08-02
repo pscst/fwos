@@ -152,7 +152,7 @@ const Hero = ({ darkMode }) => {
             <div className="flex items-center space-x-4">
               {[
                 { icon: FiLinkedin, href: 'https://www.linkedin.com', label: 'LinkedIn' },
-                { icon: FiMail, href: 'mailto:pscs0000@gmail.com', label: 'Email' },
+                { icon: FiMail, href: '#contact', label: 'Email' },
                 { icon: FiGithub, href: 'https://github.com/pscst', label: 'Github' }
               ].map((social, index) => (
                 <motion.a
