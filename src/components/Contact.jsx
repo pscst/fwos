@@ -40,26 +40,26 @@ const Contact = ({ darkMode }) => {
     }
   };
 
-  const contactInfo = [
-    {
-      icon: FiMail,
-      label: 'Email',
-      value: 'mailto:pscs0000@gmail.com',
-      href: 'mailto:pscs0000@gmail.com'
-    },
-    {
-      icon: FiPhone,
-      label: 'Phone',
-      value: '+63 976-291-****',
-      href: 'tel:+15551234567'
-    },
-    {
-      icon: FiMapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#'
-    }
-  ];
+  // const contactInfo = [
+  //   {
+  //     icon: FiMail,
+  //     label: 'Email',
+  //     value: 'mailto:pscs0000@gmail.com',
+  //     href: 'mailto:pscs0000@gmail.com'
+  //   },
+  //   {
+  //     icon: FiPhone,
+  //     label: 'Phone',
+  //     value: '',
+  //     href: ''
+  //   },
+  //   {
+  //     icon: FiMapPin,
+  //     label: 'Location',
+  //     value: '',
+  //     href: '#'
+  //   }
+  // ];
 
   return (
     <section id="contact" className={`py-20  backdrop-blur-2xl ${darkMode ? 'bg-gray-90/80' : 'bg-white/20'}`}>
@@ -94,7 +94,7 @@ const Contact = ({ darkMode }) => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className='px-2 sm:px-0'
+            className="px-2 sm:px-0 w-full max-w-xl md:max-w-2xl mx-auto"
           >
              <div className={`p-6 sm:p-6 md:p-8 rounded-2xl max-w-xs sm:max-w-full mx-auto  ${
               darkMode ? 'glass-morphism glow-border' : 'bg-gray-50 border border-gray-200'
