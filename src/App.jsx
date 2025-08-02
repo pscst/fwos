@@ -9,7 +9,7 @@ import ParticleBackground from './components/particleBg'
 import Projects from './components/Projects';
 import Contact  from './components/Contact';
 import Footer  from './components/Footer';
-import Experience from './components/Experience';
+
 
 
 
@@ -44,7 +44,6 @@ function App() {
     <Hero darkMode={darkMode} toggleTheme={toggleTheme}/>
     <About darkMode={darkMode}/>
     <Projects darkMode={darkMode}/>
-    <Experience darkMode={darkMode}/>
     <Contact darkMode={darkMode}/>
     <Footer darkMode={darkMode}/>
     </main>
