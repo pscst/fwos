@@ -62,7 +62,7 @@ const Contact = ({ darkMode }) => {
   ];
 
   return (
-    <section id="contact" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+    <section id="contact" className={`py-20  backdrop-blur-2xl ${darkMode ? 'bg-gray-90/80' : 'bg-white/20'}`}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -94,11 +94,12 @@ const Contact = ({ darkMode }) => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className='px-2 sm:px-0'
           >
-            <div className={`p-8 rounded-2xl ${
+             <div className={`p-6 sm:p-6 md:p-8 rounded-2xl max-w-xs sm:max-w-full mx-auto  ${
               darkMode ? 'glass-morphism glow-border' : 'bg-gray-50 border border-gray-200'
             }`}>
-              <h3 className={`text-2xl font-bold mb-6 ${
+              <h3 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center sm:text-left ${
                 darkMode ? 'text-white' : 'text-gray-800'
               }`}>
                 Send a Message
@@ -117,10 +118,10 @@ const Contact = ({ darkMode }) => {
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-6 sm:grid-cols-2">
                   <div>
-                    <label className={`block text-sm font-medium mb-2 ${
+                    <label className={`block text-sm font-medium mb-1 ${
                       darkMode ? 'text-gray-300' : 'text-gray-700'
                     }`}>
                       Name
@@ -140,7 +141,7 @@ const Contact = ({ darkMode }) => {
                     />
                   </div>
                   <div>
-                    <label className={`block text-sm font-medium mb-2 ${
+                    <label className={`block text-sm font-medium mb-1 ${
                       darkMode ? 'text-gray-300' : 'text-gray-700'
                     }`}>
                       Email
@@ -162,7 +163,7 @@ const Contact = ({ darkMode }) => {
                 </div>
 
                 <div>
-                  <label className={`block text-sm font-medium mb-2 ${
+                  <label className={`block text-sm font-medium mb-1 ${
                     darkMode ? 'text-gray-300' : 'text-gray-700'
                   }`}>
                     Subject
@@ -183,7 +184,7 @@ const Contact = ({ darkMode }) => {
                 </div>
 
                 <div>
-                  <label className={`block text-sm font-medium mb-2 ${
+                  <label className={`block text-sm font-medium mb-1 ${
                     darkMode ? 'text-gray-300' : 'text-gray-700'
                   }`}>
                     Message
@@ -193,7 +194,7 @@ const Contact = ({ darkMode }) => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
+                    rows={4}
                     className={`w-full p-3 rounded-lg border transition-all duration-300 focus:outline-none focus:ring-2 resize-none ${
                       darkMode 
                         ? 'bg-gray-800 border-gray-600 text-white focus:ring-cyan-500 focus:border-cyan-500' 

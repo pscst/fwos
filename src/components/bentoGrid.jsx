@@ -7,7 +7,7 @@ import codingPOV from '../assets/coding-pov.png';
 
 export default function BentoGrid({darkMode}) {
   return (
-      <div className={`py-24 sm:py-32` }>
+      <div className={`py-23 lg:py-32 md:py-27 sm:py-23` }>
       <motion.div 
        initial={{ opacity: 0, y: 50 }}
        whileInView={{ opacity: 1, y: 0 }}
@@ -21,15 +21,15 @@ export default function BentoGrid({darkMode}) {
         <div className={`w-20 h-1 mx-auto rounded-full mb-8 ${
             darkMode ? 'bg-gradient-to-r from-cyan-500 to-purple-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'
           }`}></div>
-        <div className={`${darkMode ? `backdrop-blur-sm bg-white/3 border-0 shadow-lg` : `backdrop-blur-sm bg-white/20`} rounded-xl p-8 shadow-lg mt-10 grid gap-4 sm:mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2`}>
+        <div className={`backdrop-blur-sm ${darkMode ? ` bg-white/3 border-0 shadow-lg` : ` bg-white/20`} rounded-xl p-2 lg:p-8 md:p-6 sm:p-2 shadow-lg mt-10 grid gap-4 sm:mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2`}>
 
           {/* grid 1 */}
-          <div className="relative col-span-1 md:col-span-2 row-span-1 md:row-span-2">
+          <div className="relative col-span-1 md:col-span-2 sm:col-span-1 row-span-1 md:row-span-2 sm:row-span-1">
             <div className={`absolute inset-px rounded-lg lg:rounded-l-4xl ${darkMode ? "bg-gradient-to-bl from-slate-900 to-gray-700" : "bg-white"}`} />
 
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-              <h1 className={`text-2xl sm:text-4xl font-bold tracking-tight ${
+              <h1 className={`text-2xl lg:text-4xl md:text-3xl sm:text-2xl font-bold tracking-tight ${
                 darkMode ? 'text-white' : 'text-gray-900'
               }`}>
                 Hi, I'm{' '}
@@ -41,19 +41,19 @@ export default function BentoGrid({darkMode}) {
               {/* {grad cap} */}
               <div className="flex items-center space-x-2 mb-4">
                 <GraduationCap className={`w-5 h-5 ria-hidden="true" ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}/>
-                <span className="text-sm font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="text-xs md:text-sm sm:text-xs font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Magna Cum Laude Graduate
                 </span>
               </div>
             
-              <p className={`text-lg leading-relaxed ${
+              <p className={`text-sm lg:text-lg md:text-sm sm:text-sm text-leading-relaxed ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Fresh Graduate in <span className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Bachelor of Science in Information Systems</span>, 
                 with a passion for cutting-edge technology. I've dedicated myself to learn both front-end and back-end development.
               </p>
 
-                <p className={`text-base leading-relaxed ${
+                <p className={`text-xs lg:text-sm md:text-sm sm:text-xs leading-relaxed ${
                 darkMode ? 'text-gray-400' : 'text-gray-600'
               } pb-7`}>
                 My journey began with curiosity about how digital experiences come to life, and it has evolved into a deep commitment to 
@@ -63,14 +63,14 @@ export default function BentoGrid({darkMode}) {
                   <img
                     alt=""
                     src={codingPOV}
-                    className="w-full h-auto object-cover max-h-20 sm:max-h-60 lg:max-h-50 left-20"
+                    className="w-full h-auto object-cover max-h-20 sm:max-h-60 lg:max-h-50 left-20 hidden sm:block"
                   />
             </div>
           </div>
 
           {/* grid 2 */}
           <div className="relative row-span-1 md:row-span-2">
-            <div className={`absolute inset-px rounded-lg ${darkMode ? "bg-gradient-to-bl from-slate-900 to-gray-700" : "bg-white"} max-lg:rounded-t-4xl flex-row`} />
+            <div className={`absolute inset-px rounded-lg ${darkMode ? "bg-gradient-to-bl from-slate-900 to-gray-700" : "bg-white"} flex-row`} />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
               <h1 className={`text-2xl sm:text-4xl font-bold tracking-tight ${
@@ -90,7 +90,7 @@ export default function BentoGrid({darkMode}) {
               </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-t-4xl" />
+            
           </div>
 
           {/* grid 3 */}
@@ -115,7 +115,7 @@ export default function BentoGrid({darkMode}) {
               </figure>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5" />
+            
           </div>
 
           {/* grid 4 */}
@@ -128,7 +128,7 @@ export default function BentoGrid({darkMode}) {
               }`}>
                 Illustrations
               </h1>
-              <p className={`mt-2 max-w-lg max-lg:text-center ${darkMode ? 'text-gray-300' : 'text-gray-700'} pb-5 text-lg`}>
+              <p className={`mt-2 max-w-lg max-lg:text-center ${darkMode ? 'text-gray-300' : 'text-gray-700'} pb-5 text-sm lg:text-lg md:text-sm sm:text-sm`}>
                   My passion for
                   <span className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Art </span>
                   began as a hobby and now influences my approach to design and creativity.
@@ -145,7 +145,7 @@ export default function BentoGrid({darkMode}) {
                 }
               >
 
-                  <div className="w-full flex flex-col items-center justify-center">
+                  <div className="w-full flex flex-col items-center justify-center p-4 sm:p-4">
                     <Illustrations />
                   </div>
                 </div>

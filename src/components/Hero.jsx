@@ -55,9 +55,10 @@ const Hero = ({ darkMode }) => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <div className="w-70 h-70 mx-auto mb-8 relative">
+          <div className="w-45 h-45 mx-auto mb-8 relative lg:w-70 md:w-60 sm:w-45 lg:h-70 md:h-60 sm:h-45">
+            
                 <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 p-1">
+                <div className="w-44 h-44 lg:w-64 md:w-54 sm:w-44 lg:h-64 md:h-54 sm:h-44 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 p-1">
                     <div
                     className={`w-full h-full rounded-full ${
                         darkMode ? 'bg-gray-900' : 'bg-white'
@@ -91,7 +92,7 @@ const Hero = ({ darkMode }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className={`text-4xl md:text-6xl font-futuristic font-bold mb-4 ${
+            className={`text-3xl lg:text-6xl md:text-5xl sm:text-3xl font-futuristic font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-800'
             }`}
           >
@@ -106,9 +107,10 @@ const Hero = ({ darkMode }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
-            className="h-12 mb-6"
+            className="h-12 mb-3 "
           >
-            <span className={`text-2xl md:text-3xl font-medium ${
+            <span 
+            className={`text-xl lg:text-3xl md:text-2xl sm:text-xl font-medium ${
               darkMode ? 'text-white' : 'text-blue-950'
             }`}>
               A Future-Ready{' '}
@@ -123,7 +125,7 @@ const Hero = ({ darkMode }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
-            className={`text-lg md:text-xl mb-8 max-w-2xl mx-auto ${
+            className={`text-s lg:text-xl md:text-lg sm:text-s mb-8 max-w-2xl mx-auto ${
               darkMode ? 'text-gray-300' : 'text-gray-950'
             }`}
           >
@@ -140,7 +142,7 @@ const Hero = ({ darkMode }) => {
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(21, 0, 255, 0.4)' }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToProjects}
-              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-2 lg:px-8 md:px-6 sm:px-4 lg:py-3 md:py-2 sm:py-2 rounded-full font-semibold transition-all duration-300 cursor-pointer ${
                 darkMode 
                   ? 'bg-gradient-to-r from-sky-950 to-gray-900 text-white glow-border pulse-glow' 
                   : 'bg-gradient-to-r from-sky-950 to-gray-900 text-white shadow-lg hover:shadow-xl'
@@ -151,14 +153,15 @@ const Hero = ({ darkMode }) => {
 
             <div className="flex items-center space-x-4">
               {[
-                { icon: FiLinkedin, href: 'https://www.linkedin.com', label: 'LinkedIn' },
-                { icon: FiMail, href: '#contact', label: 'Email' },
-                { icon: FiGithub, href: 'https://github.com/pscst', label: 'Github' }
+                { icon: FiLinkedin, href: 'https://www.linkedin.com', label: 'LinkedIn', external: true },
+                { icon: FiMail, href: '#contact', label: 'Email', external: false },
+                { icon: FiGithub, href: 'https://github.com/pscst', label: 'Github', external: true }
               ].map((social, index) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
+                  target={social.external ? "_blank" : undefined}
+                  rel={social.external ? "noopener noreferrer" : undefined}
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   whileTap={{ scale: 0.9 }}
                   className={`p-3 rounded-full border transition-all duration-300 ${

@@ -56,9 +56,11 @@ const Navbar = ({darkMode, toggleTheme}) => {
   return (
     <>
   <motion.header {...headerProps}
-  className='fixed top-0 left-0 right-0 z-50 transition-all duration-300'>
+  className='fixed top-0 left-0 right-0  z-50 transition-all duration-300 w-full'>
 
-    <nav className={`container mx-auto px-6 py-4 ${darkMode ? "bg-gray-950/10 " : ""}`}>
+    <nav className={`mx-auto lg:px-40 md:px-20 sm:px-15 py-4 top-0 left-0 w-full ${darkMode
+  ? 'bg-gray-950/70  backdrop-blur-md'
+  : 'bg-white/80 backdrop-blur-md'}`}>
       <div className='flex items-center justify-between'>
         <motion.div className='text-2xl font-futuristic font-bold'
         whileHover={{scale: 1.05}}
@@ -115,31 +117,30 @@ const Navbar = ({darkMode, toggleTheme}) => {
       </div>
       
 
-      {/* {mobile menu} */}
       {isOpen && (
-
-        <motion.div 
-        initial ={{opacity: 0, height: 0}}
-        animate={{opacity: 1, height: "auto"}}
-        exit={{opacity: 0, height: 0}}
-        className={`md:hidden mt-4 py-4 border-t ${darkMode ? 'border-cyan-500/20' : 'border-gray-200'}`}        
-        >
-          {menuItems.map((item) => (
-            <button 
-            key={item.name}
-            onClick={() => scrollToSection(item.href)}
-            className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors 
-            ${darkMode ? "text-gray-300 hover:text-cyan-400" : "text-gray-600 hover:text-blue-600"
-          }`}
-            >
-            {item.name}
-            </button>
-
-          ))}
-        </motion.div>
-
-
-      )}
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className={`absolute top-full left-0 w-full z-50 md:hidden mt-4 py-4 border-t ${
+              darkMode ? 'border-cyan-500/20 bg-gray-900' : 'border-gray-200 bg-white'
+            }`}
+          >
+            {menuItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors ${
+                  darkMode
+                    ? 'text-gray-300 hover:text-cyan-400'
+                    : 'text-gray-600 hover:text-blue-600'
+                }`}
+              >
+                {item.name}
+              </button>
+            ))}
+          </motion.div>
+        )}
     </nav>
   </motion.header>
     </>
