@@ -204,10 +204,10 @@ const Projects = ({ darkMode }) => {
                         <motion.button whileHover={{ scale: 1.05 }} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium ${darkMode ? 'bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30' : 'bg-gray-800/90 text-neutral-100 hover:bg-gray-950'} cursor-pointer `} onClick={() => setSelectedProject(project)}>
                           <FiPlay size={16} /> View Details
                         </motion.button>
-                        <div className="flex gap-2">
+                        {/* <div className="flex gap-2">
                           <motion.a href={project.githubUrl} whileHover={{ scale: 1.1 }} className={`p-2 rounded-lg ${darkMode ? 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'}`}><FiGithub size={20} /></motion.a>
                           <motion.a href={project.liveUrl} whileHover={{ scale: 1.1 }} className={`p-2 rounded-lg ${darkMode ? 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'}`}><FiExternalLink size={20} /></motion.a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -264,10 +264,10 @@ const Projects = ({ darkMode }) => {
                       <motion.button whileHover={{ scale: 1.05 }} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium ${darkMode ? 'bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30' : 'bg-gray-800/90 text-neutral-100 hover:bg-gray-950'} cursor-pointer `} onClick={() => setSelectedProject(project)}>
                         <FiPlay size={16} /> View Details
                       </motion.button>
-                      <div className="flex gap-2">
+                      {/* <div className="flex gap-2">
                         <motion.a href={project.githubUrl} whileHover={{ scale: 1.1 }} className={`p-2 rounded-lg ${darkMode ? 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'}`}><FiGithub size={20} /></motion.a>
                         <motion.a href={project.liveUrl} whileHover={{ scale: 1.1 }} className={`p-2 rounded-lg ${darkMode ? 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'}`}><FiExternalLink size={20} /></motion.a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </motion.div>
