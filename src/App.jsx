@@ -9,6 +9,7 @@ import ParticleBackground from './components/particleBg'
 import Projects from './components/Projects';
 import Contact  from './components/Contact';
 import Footer  from './components/Footer';
+import Experience from './components/Experience';
 
 
 
@@ -38,11 +39,12 @@ function App() {
     {!loading && (
       <>
     <ParticleBackground darkMode={darkMode}/>
-    <Navbar darkMode={darkMode} toggleTheme={toggleTheme}/>
-    <main className='relative z-10'>
-    <Hero darkMode={darkMode}/>
+    
+    <main className='relative z-10 overflow-x-hidden'>
+    <Hero darkMode={darkMode} toggleTheme={toggleTheme}/>
     <About darkMode={darkMode}/>
     <Projects darkMode={darkMode}/>
+    <Experience darkMode={darkMode}/>
     <Contact darkMode={darkMode}/>
     <Footer darkMode={darkMode}/>
     </main>

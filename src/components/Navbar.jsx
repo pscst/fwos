@@ -75,7 +75,7 @@ const Navbar = ({darkMode, toggleTheme}) => {
           {/*DEsktop*/}
 
           <div className='hidden md:flex items-center space-x-2'>
-              {menuItems.map((item, index)=>(
+              {/* {menuItems.map((item, index)=>(
 
                 <motion.button 
                   className={`relative px-3 py-2 text-sm font-medium transition-colors group cursor-pointer ${darkMode ? "text-gray-300 hover:text-cyan-400" : "text-gray-600 hover:text-blue-600"}`}
@@ -92,16 +92,16 @@ const Navbar = ({darkMode, toggleTheme}) => {
                   </span>
                 </motion.button>
   
-              ))}
-
+              ))} */}
+{/* 
               <motion.button {...sunMoonProps} className={`p-2 rounded-full border transition-colors`}
               >
                 {darkMode ? <FiSun size={20} className='text-white'/>: <FiMoon size={20} />}
-              </motion.button>
+              </motion.button> */}
             </div>    
 
                  {/*mobile*/}    
-                <div className='md:hidden flex items-center space-x-4 mx-5'>
+                {/* <div className='md:hidden flex items-center space-x-4 mx-5'>
                 <motion.button {...sunMoonProps}
                 className={`p-2 rounded-full border transition-colors`}> 
                 {darkMode ? <FiSun style={{ stroke: 'white', strokeWidth: 1 }} size={20}/> : <FiMoon size={20} />}
@@ -113,7 +113,7 @@ const Navbar = ({darkMode, toggleTheme}) => {
                 >
                     {isOpen ? <FiX size={24}/> : <FiMenu size={24}/>}
                 </button>
-            </div>
+            </div> */}
       </div>
       
 

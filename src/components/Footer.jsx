@@ -1,6 +1,6 @@
 
 
-import { FiLinkedin, FiYoutube } from "react-icons/fi";
+import { FiLinkedin, FiYoutube, FiGithub } from "react-icons/fi";
 
 const mySocials = [
  
@@ -13,39 +13,46 @@ const mySocials = [
         name: "YouTube",
         href: "https://www.youtube.com/@smthrns9166",
         icon: FiYoutube,
-      },
+    },
+    {
+        name: "GitHub",
+        href: "https://github.com/pscst",
+        icon: FiGithub,
+    },,
 
   ];
-const Footer = ({ darkMode }) => {
-
-return(
-    <>
-    <section className="flex flex-wrap items-center justify-between gap-2 py-6 text-sm  c-space">
-
-
-
-        <div className={`m-4  ${darkMode ? "bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent" : "bg-gradient-to-r from-transparent via-gray-600 to-transparent"}  h-[1px] w-full`}/>
-
-        <div className={`${darkMode ? "text-neutral-200/60 "  : "text-gray-800 "}`}>
-            <p>Made with React JS and Tailwind CSS |</p>
-           
+  const Footer = ({ darkMode }) => {
+    return (
+      <section className="flex flex-col md:flex-row flex-wrap items-center justify-between gap-4 py-6 text-sm c-space text-center md:text-left">
+        
+        {/* Top Divider Line */}
+        <div className={`w-full h-[1px] my-2 ${darkMode 
+          ? "bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent" 
+          : "bg-gradient-to-r from-transparent via-gray-600 to-transparent"}`}/>
+        
+        {/* Made With Text */}
+        <div className={`${darkMode ? "text-neutral-200/60" : "text-gray-800"}`}>
+          <p>Made with React JS + Vite and Tailwind CSS |</p>
         </div>
-        <div className="flex gap-3">
-
-        {mySocials.map((social, index)=>(
-        <a href={social.href} key={index} target="_blank">
-           <div className={`w-f h-5 ${darkMode ? "text-neutral-200/60 "  : "text-gray-800 "}`} >
-           <social.icon 
-           size={20}
-           />
-           </div>
-
-        </a>))}
+  
+        {/* Social Icons */}
+        <div className="flex gap-3 flex-wrap justify-center md:justify-start">
+          {mySocials.map((social, index) => (
+            <a href={social.href} key={index} target="_blank">
+              <div className={`w-5 h-5 ${darkMode ? "text-neutral-200/60" : "text-gray-800"}`}>
+                <social.icon size={20} />
+              </div>
+            </a>
+          ))}
         </div>
-        <p className={`${darkMode ? "text-neutral-200/60 "  : "text-gray-800 "}`}>| © 2025 All Rights Reserved.</p>
-    </section>
-    </>
-)
-}
+  
+        {/* Copyright Text */}
+        <p className={`${darkMode ? "text-neutral-200/60" : "text-gray-800"}`}>
+          | © 2025 All Rights Reserved.
+        </p>
+      </section>
+    );
+  };
+  
 
 export default Footer;

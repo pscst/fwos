@@ -17,12 +17,13 @@ const Projects = ({ darkMode }) => {
       id: 1,
       title: 'Voice-Activated Lights Using Dabble App (Bluetooth)',
       description: 'Voice-controlled lighting system using smartphone voice commands.',
-      longDescription: 'The Dabble app captures voice input, converts it to text, and sends commands via Bluetooth to the Arduino to control 8x8 LED patterns and animations.',
+      longDescription: 'The Dabble app captures voice input, converts it to text, and sends commands via Bluetooth to an Arduino, controlling an 8x8 LED matrix with element-themed animations. \n • Beating heart, earth, fire, and water animations \n • Interactive serial command interface for pattern control.',  
       image: arduino,
       technologies: ['Arduino Uno', 'HC-05 Bluetooth module', 'C++'],
       githubUrl: 'https://github.com/pscst/Voice-Activated-Lights---Arduino',
       liveUrl: '#',
-      category: 'Arduino'
+      category: 'Arduino',
+      year: 2025
     },
     {
       id: 2,
@@ -33,7 +34,8 @@ const Projects = ({ darkMode }) => {
       technologies: ['HTML5', 'CSS3', 'Chart.js', 'PHP', 'MySQL', 'JavaScript', 'BootStrap'],
       githubUrl: 'https://github.com/pscst',
       liveUrl: '#',
-      category: 'Web-Application'
+      category: 'Web-Application',
+      year: 2024
     },
     {
       id: 3,
@@ -44,7 +46,8 @@ const Projects = ({ darkMode }) => {
       technologies: ['HTML5', 'CSS3', 'Chart.js', 'PHP', 'MySQL', 'JavaScript', 'SMS API', 'BootStrap'],
       githubUrl: 'https://github.com/pscst',
       liveUrl: '#',
-      category: 'Web-Application'
+      category: 'Web-Application',
+      year: 2024
     },
     {
       id: 4,
@@ -55,7 +58,8 @@ const Projects = ({ darkMode }) => {
       technologies: ['HTML5', 'CSS3', 'JavaScript'],
       githubUrl: 'https://github.com/pscst/chainsawman-web.github.io',
       liveUrl: '#',
-      category: 'Website'
+      category: 'Website',
+      year: 2023
     }
   ];
 
@@ -249,7 +253,7 @@ const Projects = ({ darkMode }) => {
 
                   <div className="p-6 pb-20">
                     <h3 className={`text-xl font-bold mb-2 ${darkMode ? 'bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-pulse' : 'text-gray-900'}`}>
-                      {project.title}
+                      {project.title} - {project.year}
                     </h3>
                     <div className="flex flex-wrap gap-2 mb-2">
                       {project.technologies.slice(0, 8).map(tech => (
@@ -287,8 +291,16 @@ const Projects = ({ darkMode }) => {
                 </div>
 
                 <div className="p-8">
-                  <h3 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>{selectedProject.title}</h3>
-                  <p className={`text-sm lg:text-lg md:text-sm sm:text-sm mb-6 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{selectedProject.longDescription}</p>
+                  <h3 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>{selectedProject.title}- {selectedProject.year}</h3>
+                  <p className={`text-sm lg:text-lg md:text-sm sm:text-sm mb-6 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {selectedProject.longDescription.split('\n').map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
+
                   <div className="mb-6">
                     <h4 className={`text-sm lg:text-xl md:text-lg sm:text-sm font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
