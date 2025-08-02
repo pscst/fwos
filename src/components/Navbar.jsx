@@ -40,10 +40,10 @@ const Navbar = ({darkMode, toggleTheme}) => {
   }, []);
 
     const menuItems =[
-        {name: 'Home', href: '#hero'},
-        {name: 'About', href: '#about'},
-        {name: 'Projects', href: '#projects'},
-        {name: 'Contact Me', href: '#contact'}
+        {name: '<Home/>', href: '#hero'},
+        {name: '<About/>', href: '#about'},
+        {name: '<Projects/>', href: '#projects'},
+        {name: '<Contact Me/>', href: '#contact'}
     ];
 
     const scrollToSection = (href) => {
@@ -66,7 +66,7 @@ const Navbar = ({darkMode, toggleTheme}) => {
         whileHover={{scale: 1.05}}
         >
           <a href="#home">
-          <span className={`cursor-pointer ${darkMode ? 'text-cyan-400 glow-text' : 'text-gray-600'}`}>
+          <span className={`mx-5 cursor-pointer ${darkMode ? 'text-cyan-400 glow-text' : 'text-gray-600'}`}>
             {'<FWOS/>'}
           </span>
           </a>
@@ -101,7 +101,7 @@ const Navbar = ({darkMode, toggleTheme}) => {
             </div>    
 
                  {/*mobile*/}    
-                <div className='md:hidden flex items-center space-x-4'>
+                <div className='md:hidden flex items-center space-x-4 mx-5'>
                 <motion.button {...sunMoonProps}
                 className={`p-2 rounded-full border transition-colors`}> 
                 {darkMode ? <FiSun style={{ stroke: 'white', strokeWidth: 1 }} size={20}/> : <FiMoon size={20} />}
@@ -122,15 +122,15 @@ const Navbar = ({darkMode, toggleTheme}) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`absolute top-full left-0 w-full z-50 md:hidden mt-4 py-4 border-t ${
-              darkMode ? 'border-cyan-500/20 bg-gray-900' : 'border-gray-200 bg-white'
+            className={`backdrop-blur-sm absolute top-full left-0 w-full z-50 md:hidden mt-0 py-4 border-t${
+              darkMode ? 'border-cyan-500/20 bg-gray-900/90' : 'border-gray-200 bg-gray-200/90'
             }`}
           >
             {menuItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors ${
+                className={`block w-full px-4 py-2 text-lg font-bold transition-colors text-center  ${
                   darkMode
                     ? 'text-gray-300 hover:text-cyan-400'
                     : 'text-gray-600 hover:text-blue-600'
