@@ -2,24 +2,32 @@
 import { twMerge } from "tailwind-merge";
 import { Marquee } from "./mariquee";
 
+
+import art1 from '../assets/illustrations/art-1.jpg';
+import art2 from '../assets/illustrations/art-2.jpg';
+import art3 from '../assets/illustrations/art-3.jpg';
+import art4 from '../assets/illustrations/art-4.jpg';
+import art5 from '../assets/illustrations/art-5.jpg';
+import art6 from '../assets/illustrations/art-6.jpg';
+
 const reviews = [
   {
-    img: "/assets/illustrations/art-1.jpg",
+    img: art1,
   },
   {
-    img: "/assets/illustrations/art-2.jpg",
+    img: art2,
   },
   {
-    img: "/assets/illustrations/art-3.jpg",
+    img: art3,
   },
   {
-    img: "/assets/illustrations/art-4.jpg",
+    img: art4,
   },
   {
-    img: "/assets/illustrations/art-5.jpg",
+    img: art5,
   },
   {
-    img: "/assets/illustrations/art-6.jpg",
+    img: art6,
   },
 ];
 

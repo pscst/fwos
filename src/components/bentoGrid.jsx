@@ -3,7 +3,7 @@ import Frameworks from "../components/Frameworks";
 import { Globe } from "../components/globe";
 import { GraduationCap } from 'lucide-react';
 import { Illustrations } from './illustrations';
-
+import codingPOV from '../assets/coding-pov.png';
 
 export default function BentoGrid({darkMode}) {
   return (
@@ -62,7 +62,7 @@ export default function BentoGrid({darkMode}) {
               </div>
                   <img
                     alt=""
-                    src="/assets/coding-pov.png"
+                    src={codingPOV}
                     className="w-full h-auto object-cover max-h-20 sm:max-h-60 lg:max-h-50 left-20"
                   />
             </div>

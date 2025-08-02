@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiGithub, FiX, FiPlay } from 'react-icons/fi';
 
+
+import arduino from '../assets/projects/arduino.jpg';
+import arms from '../assets/projects/arms.png';
+import sims from '../assets/projects/sims.png';
+import csm from '../assets/projects/csm.jpg';
+
 const Projects = ({ darkMode }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState('all');
@@ -12,7 +18,7 @@ const Projects = ({ darkMode }) => {
       title: 'Voice-Activated Lights Using Dabble App (Bluetooth)',
       description: 'Voice-controlled lighting system using smartphone voice commands.',
       longDescription: 'The Dabble app captures voice input, converts it to text, and sends commands via Bluetooth to the Arduino to control LED patterns and behaviors.',
-      image: './src/assets/projects/arduino.jpg',
+      image: arduino,
       technologies: ['Arduino Uno', 'HC-05 Bluetooth module', 'C++'],
       githubUrl: '#',
       liveUrl: '#',
@@ -23,7 +29,7 @@ const Projects = ({ darkMode }) => {
       title: 'Assessment Request Management System',
       description: 'TESDA system to manage and track assessment requests.',
       longDescription: 'Built for TESDA, this system improves tracking, approval workflows, scheduling, and monitoring of assessment requests.',
-      image: './src/assets/projects/arms.png',
+      image: arms,
       technologies: ['HTML5', 'CSS3', 'Chart.js', 'PHP', 'MySQL', 'JavaScript'],
       githubUrl: '#',
       liveUrl: '#',
@@ -34,7 +40,7 @@ const Projects = ({ darkMode }) => {
       title: 'Sales and Inventory Management System',
       description: 'Tracks sales, inventory, and suppliers with integrated SMS alerts.',
       longDescription: 'A system for tracking sales, inventory, and supplier transactions. Includes SMS notifications for streamlined supplier communications and improved accuracy.',
-      image: './src/assets/projects/sims.png',
+      image: sims,
       technologies: ['HTML5', 'CSS3', 'Chart.js', 'PHP', 'MySQL', 'JavaScript', 'SMS API'],
       githubUrl: '#',
       liveUrl: '#',
@@ -45,7 +51,7 @@ const Projects = ({ darkMode }) => {
       title: 'Chainsaw Man Website (Replica)',
       description: 'A replica fan site with responsive design.',
       longDescription: 'A responsive replica website for Chainsaw Man featuring animations and mobile-first layout.',
-      image: './src/assets/projects/csm.jpg',
+      image: csm,
       technologies: ['HTML5', 'CSS3', 'JavaScript'],
       githubUrl: '#',
       liveUrl: '#',
