@@ -16,7 +16,7 @@ const mySocials = [
     },
     {
         name: "GitHub",
-        href: "https://github.com/pscst",
+        href: "https://github.com/frosdc",
         icon: FiGithub,
     },,
 
