@@ -36,7 +36,7 @@ const Projects = ({ darkMode }) => {
       liveUrl: '#',
       category: 'Web-Application',
       year: 2024,
-      videoId: "1bq6vuQ1x7SgyQnG3s_VY5nQXtJ7RkiQl"
+      videoId: "1ZK3Hpo1hh4dURUjb5eaCllIPhTl_qHhQ"
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ const Projects = ({ darkMode }) => {
       liveUrl: '#',
       category: 'Web-Application',
       year: 2024,
-      videoId: "1jpYD_xdFHcHApev6D6tO0B9_t0bcBI-l"
+      videoId: "1sl6JxRL_U8zWVxZaaB-9iS_LS97jzkop"
     },
     {
       id: 4,
