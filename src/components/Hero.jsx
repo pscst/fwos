@@ -237,7 +237,7 @@ const Hero = ({ darkMode, toggleTheme }) => {
               {[
                 { icon: FiLinkedin, href: 'https://www.linkedin.com', label: 'LinkedIn', external: true },
                 { icon: FiMail, href: '#contact', label: 'Email', external: false },
-                { icon: FiGithub, href: 'https://github.com/pscst', label: 'Github', external: true }
+                { icon: FiGithub, href: 'https://github.com/frosdc', label: 'Github', external: true }
               ].map((social, index) => (
                 <motion.a
                   key={social.label}
