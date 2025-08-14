@@ -45,7 +45,7 @@ const Projects = ({ darkMode }) => {
       longDescription: 'A system for tracking sales, inventory, and supplier transactions. Includes SMS notifications for supplier communications and improved accuracy.',
       image: sims,
       technologies: ['HTML5', 'CSS3', 'Chart.js', 'PHP', 'MySQL', 'JavaScript', 'SMS API', 'BootStrap'],
-      githubUrl: 'https://github.com/frosdc',
+      githubUrl: 'https://github.com/frosdc/Sales-and-Inventory-Management-System',
       liveUrl: '#',
       category: 'Web-Application',
       year: 2024,
