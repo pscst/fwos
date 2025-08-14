@@ -235,7 +235,7 @@ const Hero = ({ darkMode, toggleTheme }) => {
 
             <div className="flex items-center space-x-4">
               {[
-                { icon: FiLinkedin, href: 'https://www.linkedin.com', label: 'LinkedIn', external: true },
+                { icon: FiLinkedin, href: 'https://www.linkedin.com/in/frosarydelacruz', label: 'LinkedIn', external: true },
                 { icon: FiMail, href: '#contact', label: 'Email', external: false },
                 { icon: FiGithub, href: 'https://github.com/frosdc', label: 'Github', external: true }
               ].map((social, index) => (
